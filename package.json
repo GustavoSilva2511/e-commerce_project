@@ -1,0 +1,24 @@
+{
+  "name": "e-commerce_project",
+  "version": "1.0.0",
+  "description": "Project simulating a e-commerce API",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devMode": "nodemon ./server.js"
+  },
+  "author": "Gustavo Silva",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "file-api": "^0.10.4",
+    "fs-extra": "^11.1.0",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "shortid": "^2.2.16",
+    "sqlite3": "^5.1.2"
+  }
+}
