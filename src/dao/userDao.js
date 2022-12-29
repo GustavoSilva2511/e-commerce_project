@@ -64,6 +64,26 @@ class usarDao {
         })
     }
 
+    changeUserToken(body, id) {
+        const SQL = `UPDATE users 
+        SET token = ?
+        WHERE id = ?`;
+
+        const newToken = [body.token, id]
+
+        return new Promise((res, rej) => {
+            this.db.run(SQL, newToken, (error) => {
+                if (!error) {
+                    res("Updated");
+                }else {
+                    rej(error);
+                }
+            })
+        })
+    }
+
+
+
     deleteUser(id) {
         const SQL = `DELETE FROM users WHERE id = ?`;
 

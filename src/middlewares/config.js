@@ -6,8 +6,10 @@ const middlesware = (app, Express, cors) =>{
     })
 
     const options = {
-        origin: "*"
+        origin: "*",
+        methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     };
+    
     app.use(cors(options));
 };
 

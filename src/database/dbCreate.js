@@ -22,7 +22,8 @@ const checkDb = async () => {
             id VARCHAR(50) PRIMARY KEY,
             name VARCHAR(80),
             email VARCHAR(80),
-            password VARCHAR(100)
+            password VARCHAR(100),
+            token VARCHAR(150)
         )`;
         
         const createTableUsers = () => {
@@ -38,7 +39,8 @@ const checkDb = async () => {
             id  VARCHAR(50) PRIMARY KEY,
             user_id VARCHAR(50),
             product_id VARCHAR(50),
-            stats VARCHAR(100)
+            stats VARCHAR(100),
+            token VARCHAR(150)
         )`;
 
         const createTableCarts = () =>{
@@ -53,7 +55,8 @@ const checkDb = async () => {
             id VARCHAR(50) PRIMARY KEY,
             tittle VARCHAR(80),
             description VARCHAR(80),
-            price FLOAT
+            price FLOAT,
+            token VARCHAR(150)
         )`;
 
         const createTableProducts = () =>{

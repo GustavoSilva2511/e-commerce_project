@@ -39,6 +39,16 @@ const usersRouts = (app, db) =>{
             console.error(error);
         }
     });
+
+    app.put("/users/setToken/:id", async (request, response) => {
+        try {
+            const id = request.params.id;
+            const data = await userdao.changeUserToken(request.body, id);
+            response.send(data);
+        } catch (error) {
+            console.error(error);
+        }
+    });
     
     app.delete("/users/:id", async (request, response) => {
         try {
