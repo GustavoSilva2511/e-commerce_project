@@ -8,6 +8,7 @@ const cartsRouts = (app, db) => {
         try {
             const data = await cartdao.getAllCart();
             response.json(data);
+            console.log(data)
         } catch (error) {
             console.log(error)
         }

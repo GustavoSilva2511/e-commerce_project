@@ -8,6 +8,7 @@ const productsRoutes = (app, db) =>{
         try {
             const data = await productdao.getAllProduct(); 
             response.json(data);
+            console.log(data)
 
         } catch (error) {
             console.error(error);

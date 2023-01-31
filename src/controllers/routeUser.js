@@ -8,7 +8,7 @@ const usersRouts = (app, db) =>{
         try {
             const data = await userdao.getAllUser(); 
             response.json(data);
-
+            console.log(data)
         } catch (error) {
             console.error(error);
         }
